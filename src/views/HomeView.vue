@@ -1,18 +1,29 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div >
+<!--    <div v-for="move in listMove" :key="move.id">-->
+<!--    {{move.move}}-->
+<!--      </div>-->
+    <MyForm />
+    <Board />
+<!--    <Settings />-->
+<!--    <Parent />-->
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+ import MyForm from "@/components/MyForm";
+ import Board from "@/components/Board";
+ // import Settings from "@/components/Settings";
+ // import Parent from "@/components/Parent";
+    export default {
+        name: 'HomeView',
+      components: {Board, MyForm},
+      data(){
+          // return {
+          //   listMove: []
+          // }
+      },
 
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
-}
+
+    }
 </script>

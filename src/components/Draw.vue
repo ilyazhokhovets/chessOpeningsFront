@@ -1,12 +1,10 @@
 <template>
-  <div id="home">
-    hbjbk
-    </div>
+$END$
 </template>
 
 <script>
 export default {
-  name: "Nav"
+name: "Draw"
 }
 </script>
 

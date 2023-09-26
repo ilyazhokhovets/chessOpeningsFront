@@ -6,6 +6,10 @@
 <!--&lt;!&ndash;  <button @click="ыу">Сделать текущую позицию начальной</button>&ndash;&gt;-->
   Максимальная глубина
   <input v-model="settings.maxDepth" class="digitinput" > <br>
+
+    <input type="checkbox" value="noStudy" id="checkbox" v-model="settings.noStudy" />
+<label for="checkbox"> Не запускать режим обучниея </label>
+
 <!--  Максимальная оценка белых-->
 <!--  <input v-model="settings.maxCpWhite" class="digitinput"> <br>-->
 <!--  Максимальная оценка черных-->
@@ -32,7 +36,9 @@ export default {
       maxCpWhite: '150',
       maxCpBlack: '-100',
       minAppearancePercent: '0.05',
-      minAppearancePercentTotal: '10000'}
+      minAppearancePercentTotal: '10000',
+      noStudy: false
+      }
     }
   },
   watch: {

@@ -16,7 +16,7 @@
   </div>
 
   <div v-model="stats" v-if="this.record===false">
-    Статистика:{{stats.suc}} / {{stats.total}}
+    Статистика в этой позиции:{{stats.suc}} / {{stats.total}}
 
   </div>
   <div v-else> Статистика: Режим обучения</div>
@@ -47,7 +47,7 @@
 
 <p v-if="pgn.length">FEN: {{game.fen()}}</p>
   <p v-if="pgn.length===0">FEN: {{'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'}}</p>
-
+{{record}}
   </div>
 
 </template>
@@ -112,7 +112,15 @@ watch: {
       if (this.status === 'connected') {
         this.reset()
       }
+  },
+  record(){
+      var settings = this.$store.getters.getSettings
+      if (this.record && settings.noStudy) {
+        // console.log('settings',settings.noStudy)
+        this.reset()
+      }
   }
+
 
 },
 

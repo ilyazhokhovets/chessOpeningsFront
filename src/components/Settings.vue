@@ -9,7 +9,7 @@
 
     <input type="checkbox" value="noStudy" id="checkbox" v-model="settings.noStudy" />
 <label for="checkbox"> Не запускать режим обучниея </label>
-
+<br>
 <!--  Максимальная оценка белых-->
 <!--  <input v-model="settings.maxCpWhite" class="digitinput"> <br>-->
 <!--  Максимальная оценка черных-->

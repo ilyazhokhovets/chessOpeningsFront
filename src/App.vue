@@ -1,20 +1,20 @@
 <template>
  <div id="app">
-<!--  <Nav />-->
 
-<!--   <Board />-->
   <router-view/>
 
     </div>
 </template>
 
 <style>
-/*@import "assets/css/chessboard-1.0.0.css";*/
+
 </style>
 <script>
-import Nav from "./components/Nav";
-import Board from "./components/Board";
+import testcase from "@/components/testcase";
+import Socket from "@/components/Socket";
+import Settings from "@/components/Settings";
+import Draw from "@/components/Draw";
 export default {
-  components: {Board, Nav}
+  components: {Socket, Settings, Draw, testcase}
 }
 </script>

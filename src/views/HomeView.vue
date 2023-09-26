@@ -1,28 +1,22 @@
 <template>
   <div >
-<!--    <div v-for="move in listMove" :key="move.id">-->
-<!--    {{move.move}}-->
-<!--      </div>-->
-    <MyForm />
-    <Board />
-<!--    <Settings />-->
-<!--    <Parent />-->
+<!--<testcase />-->
+    <Socket />
+    <Settings />
+<!--<Draw />-->
   </div>
 </template>
 
 <script>
- import MyForm from "@/components/MyForm";
- import Board from "@/components/Board";
- // import Settings from "@/components/Settings";
- // import Parent from "@/components/Parent";
+
+ import Socket from "@/components/Socket";
+ import Settings from "@/components/Settings";
+import Draw from "@/components/Draw";
+ import testcase from "@/components/testcase";
     export default {
         name: 'HomeView',
-      components: {Board, MyForm},
-      data(){
-          // return {
-          //   listMove: []
-          // }
-      },
+      components: {testcase, Socket, Settings, Draw},
+
 
 
     }

@@ -2,14 +2,18 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from "./store";
-// import Chessboard from "./chessboardjs/js/chessboard"
-// Vue.prototype.Chessboard = window.Chessboard;
+import VueKonva from 'vue-konva'
+// import VuetifyColorInput from 'vuetify-color-input/a-la-carte';
 
 Vue.config.productionTip = false
-
+Vue.use(VueKonva)
+// Vue.use(VuetifyColorInput)
 new Vue({
-  // Chessboard,
+
   router,
   store,
+
   render: h => h(App)
 }).$mount('#app')
+
+
